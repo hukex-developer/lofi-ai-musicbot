@@ -5,10 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LO-F! AI - Premium Discord Music Bot</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Snowfall Animation -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">🎵</div>
+        <div class="snowflake">🎶</div>
+        <div class="snowflake">🎧</div>
+        <div class="snowflake">🎵</div>
+        <div class="snowflake">🎶</div>
+        <div class="snowflake">🎧</div>
+        <div class="snowflake">🎵</div>
+        <div class="snowflake">🎶</div>
+        <div class="snowflake">🎧</div>
+        <div class="snowflake">🎵</div>
+    </div>
+
     <div class="container">
         <header>
             <div class="logo-container">
@@ -104,7 +122,36 @@
             <p>&copy; 2026 LO-F! AI • Crafted with ❤️ by HUKEX</p>
         </footer>
     </div>
-</body>
 
+    <!-- Circular Favicon Script -->
+    <script>
+        window.addEventListener('load', () => {
+            const img = new Image();
+            img.src = 'logo.png';
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                const size = 64; // Standard favicon size
+                canvas.width = size;
+                canvas.height = size;
+                const ctx = canvas.height === size ? canvas.getContext('2d') : null;
+                if (!ctx) return;
+
+                // Draw circular crop
+                ctx.beginPath();
+                ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.clip();
+
+                ctx.drawImage(img, 0, 0, size, size);
+
+                // Set as favicon
+                const link = document.querySelector("link[rel~='icon']");
+                if (link) {
+                    link.href = canvas.toDataURL('image/png');
+                }
+            };
+        });
+    </script>
+</body>
 
 </html>
