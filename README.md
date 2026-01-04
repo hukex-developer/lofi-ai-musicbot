@@ -4,6 +4,8 @@ A professional, high-performance promotional website for the **LO-F! AI** Discor
 
 ## ✨ Key Features
 
+https://hukex-developer.github.io/lofi-ai-musicbot/
+
 - **Pulsing Obsidian Theme:** A sophisticated dark interface with neon pink accents.
 - **Liquid Aurora Background:** High-end animated gradient effects for a dynamic feel.
 - **Interactive Snowfall:** Graceful music-themed particles (🎵, 🎶, 🎧) floating across the screen.
@@ -46,3 +48,4 @@ A professional, high-performance promotional website for the **LO-F! AI** Discor
 
 ---
 *Powered by LO-F! AI • High-Fidelity Audio for Your Discord Community*
+
